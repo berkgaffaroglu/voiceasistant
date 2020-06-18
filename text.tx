@@ -1,9 +1,0 @@
-
-if 'youtube' in text.lower():
-        text = text.split(' ').strip().lower()
-        youtube_in_text = text.index('youtube')
-        query = text[:youtube_in_text:-1]
-        BASE_URL = "https://www.youtube.com/results?search_query={}"
-        response(f'Searching in youtube, {query}')
-        browser = webdriver.Chrome()
-        browser.get(BASE_URL.format(query))
